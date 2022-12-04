@@ -1,15 +1,13 @@
 local MainUI = game.Players.LocalPlayer.PlayerGui:FindFirstChild("MainGui")
 local Admins = {"CatAntIers","Liffley","K_ozmix","SatoriCat","dragonpetaI","CommonRaccoon","Baboontoofs43","Charley_Goji"}
 
-while true do
 game.Players.PlayerAdded:Connect(function(player)
     if table.find(Admins,player.Name) then
         game.Players.LocalPlayer:Kick("Admin Joinned!!")
     end
 end)    
     
-wait()
-end
+
 
 for _, btns in pairs(MainUI.SelectScreen:GetChildren()) do
     if btns:IsA("TextButton") then
