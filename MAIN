@@ -11,15 +11,6 @@ end)
 wait()
 end
 
-for _, I in pairs(game.Players:GetChildren()) do
-    if I:IsA("Player") then
-        if table.find(Admins,I.Name) then
-        game.Players.LocalPlayer:Kick("Admin in this server!!")
-    end 
-    end
-end
-
-   
 for _, btns in pairs(MainUI.SelectScreen:GetChildren()) do
     if btns:IsA("TextButton") then
         if btns.Visible == false then
