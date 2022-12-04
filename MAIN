@@ -1,0 +1,41 @@
+local MainUI = game.Players.LocalPlayer.PlayerGui:FindFirstChild("MainGui")
+local Admins = {"CatAntIers","Liffley","K_ozmix","SatoriCat","dragonpetaI","CommonRaccoon","Baboontoofs43","Charley_Goji"}
+
+while true do
+game.Players.PlayerAdded:Connect(function(player)
+    if table.find(Admins,player.Name) then
+        game.Players.LocalPlayer:Kick("Admin Joinned!!")
+    end
+end)    
+    
+wait()
+end
+
+for _, I in pairs(game.Players:GetChildren()) do
+    if I:IsA("Player") then
+        if table.find(Admins,I.Name) then
+        game.Players.LocalPlayer:Kick("Admin in this server!!")
+    end 
+    end
+end
+
+   
+for _, btns in pairs(MainUI.SelectScreen:GetChildren()) do
+    if btns:IsA("TextButton") then
+        if btns.Visible == false then
+            btns.Visible = true
+        end
+    end
+    if btns:IsA("ScrollingFrame") then
+        if btns.ScrollingEnabled == false then
+            btns.ScrollingEnabled = true
+        end
+        for _, i in pairs(btns:GetChildren()) do
+            if i:IsA("ImageButton") then
+                if i.Visible == false then
+                    i.Visible = true
+                end
+            end
+        end
+    end
+end
